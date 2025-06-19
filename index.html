@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Surprise Birthday for My Love ❤️</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --color-bg-light: #ffffff;
+        --color-primary-light: #ff6178;
+        --color-accent-light: #f98ca7;
+        --color-text-light: #333333;
+        --color-text-muted-light: #6b7280;
+        --color-card-bg-light: #f7f4f9;
+
+        --color-bg-dark: #1a1a2e;
+        --color-primary-dark: #ff3c78;
+        --color-accent-dark: #ff6584;
+        --color-text-dark: #fff2f7;
+        --color-text-muted-dark: #d3c6d9;
+        --color-card-bg-dark: rgba(255 255 255 / 0.05);
+
+        --font-family: "Poppins", sans-serif;
+        --border-radius: 12px;
+        --shadow-light: rgba(246, 161, 177, 0.3);
+        --shadow-subtle-light: rgba(0, 0, 0, 0.05);
+        --shadow-dark: rgba(25, 15, 40, 0.7);
+
+        --transition-speed: 0.35s;
+      }
+      body {
+        margin: 0;
+        font-family: var(--font-family);
+        background: var(--color-bg-light);
+        color: var(--color-text-light);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        transition: background-color 0.5s ease, color 0.5s ease;
+      }
+      a {
+        color: var(--color-primary-light);
+        text-decoration: none;
+        transition: color var(--transition-speed) ease;
+      }
+      a:hover,
+      a:focus {
+        color: var(--color-accent-light);
+        outline: none;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        background: var(--color-bg-light);
+        box-shadow: 0 2px 6px var(--shadow-subtle-light);
+        z-index: 1000;
+        padding: 1rem 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: background-color 0.5s ease, box-shadow 0.5s ease;
+      }
+      header .logo {
+        font-weight: 700;
+        font-size: 1.5rem;
+        color: var(--color-primary-light);
+      }
+      header nav {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+      }
+      header nav a {
+        font-weight: 600;
+        font-size: 1rem;
+        padding: 0.3rem 0.2rem;
+        border-radius: 0.375rem;
+        transition: background-color var(--transition-speed) ease,
+          color var(--transition-speed) ease;
+      }
+      header nav a:hover,
+      header nav a:focus {
+        background-color: var(--color-card-bg-light);
+        color: var(--color-accent-light);
+        outline-offset: 2px;
+      }
+      /* Theme toggle switch */
+      .theme-toggle {
+        display: flex;
+        align-items: center;
+      }
+      .toggle-label {
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--color-text-muted-light);
+        user-select: none;
+      }
+      .toggle-switch {
+        position: relative;
+        width: 44px;
+        height: 22px;
+      }
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        border-radius: 22px;
+        transition: background-color 0.4s;
+      }
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 18px;
+        width: 18px;
+        left: 2px;
+        bottom: 2px;
+        background-color: white;
+        border-radius: 50%;
+        transition: transform 0.4s;
+      }
+      input:checked + .slider {
+        background-color: var(--color-primary-light);
+      }
+      input:checked + .slider:before {
+        transform: translateX(22px);
+      }
+
+      main {
+        max-width: 1200px;
+        margin: 2rem auto 3rem;
+        padding: 0 2rem;
+      }
+      .hero {
+        text-align: center;
+        padding-top: 3rem;
+        padding-bottom: 1.5rem;
+        user-select: none;
+      }
+      .hero h1 {
+        font-weight: 700;
+        font-size: 3.75rem;
+        color: var(--color-primary-light);
+        margin: 0 0 0.25rem;
+        line-height: 1.1;
+        user-select: text;
+      }
+      .hero p.subtext {
+        font-weight: 500;
+        font-size: 1.25rem;
+        color: var(--color-text-muted-light);
+        margin: 0 0 1.5rem;
+        font-style: italic;
+      }
+      button#reveal-btn {
+        background-color: var(--color-primary-light);
+        border: none;
+        color: white;
+        font-weight: 700;
+        font-size: 1.25rem;
+        padding: 0.9rem 2.7rem;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        box-shadow: 0 6px 14px var(--shadow-light);
+        transition: background-color var(--transition-speed) ease,
+          transform var(--transition-speed) ease;
+        user-select: none;
+      }
+      button#reveal-btn:hover,
+      button#reveal-btn:focus {
+        background-color: var(--color-accent-light);
+        transform: scale(1.05);
+        outline-offset: 3px;
+      }
+      #surprise-message {
+        max-width: 700px;
+        margin: 1.5rem auto 0;
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-primary-light);
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        user-select: text;
+        text-align: center;
+        min-height: 4rem;
+      }
+      #surprise-message.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      /* Countdown timer styling */
+      #countdown {
+        margin-top: 1.2rem;
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-text-muted-light);
+        user-select: none;
+      }
+      /* Surprise messages carousel */
+      .carousel {
+        max-width: 700px;
+        margin: 2rem auto 0;
+        user-select: none;
+        position: relative;
+      }
+      .carousel-message {
+        font-size: 1.3rem;
+        font-weight: 600;
+        color: var(--color-primary-light);
+        min-height: 4rem;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+      }
+      .carousel-message.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .carousel-controls {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .carousel-controls button {
+        background: var(--color-card-bg-light);
+        border: none;
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 1.2rem;
+        line-height: 1;
+        color: var(--color-primary-light);
+        transition: background-color var(--transition-speed) ease,
+          color var(--transition-speed) ease;
+      }
+      .carousel-controls button:hover,
+      .carousel-controls button:focus {
+        background-color: var(--color-primary-light);
+        color: white;
+        outline: none;
+      }
+      /* Moments section */
+      section.moments {
+        margin-top: 4rem;
+      }
+      section.moments h2 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 2rem;
+        color: var(--color-primary-light);
+        user-select: text;
+      }
+      .moments-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 1.8rem;
+      }
+      .card {
+        background: var(--color-card-bg-light);
+        border-radius: var(--border-radius);
+        box-shadow: 0 6px 12px var(--shadow-subtle-light);
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        transition: box-shadow var(--transition-speed) ease,
+          transform var(--transition-speed) ease, opacity 0.6s ease;
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      .card.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .card:hover,
+      .card:focus-within {
+        box-shadow: 0 12px 22px var(--shadow-light);
+        transform: translateY(-6px);
+        outline: none;
+      }
+      .card img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+      }
+      .card-content {
+        padding: 1.25rem 1.5rem 1.75rem;
+        flex-grow: 1;
+      }
+      .card-content h3 {
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+        font-weight: 700;
+        color: var(--color-primary-light);
+      }
+      .card-content p {
+        margin: 0;
+        font-size: 1rem;
+        color: var(--color-text-muted-light);
+      }
+      /* Game section */
+      section.game {
+        margin-top: 4rem;
+        user-select: none;
+      }
+      section.game h2 {
+        font-weight: 700;
+        font-size: 2.5rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+        color: var(--color-primary-light);
+      }
+      .game-info {
+        text-align: center;
+        font-weight: 600;
+        color: var(--color-text-muted-light);
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+      }
+      .game-grid {
+        max-width: 640px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+      }
+      .card-game {
+        background: var(--color-card-bg-light);
+        border-radius: var(--border-radius);
+        box-shadow: 0 4px 10px var(--shadow-subtle-light);
+        cursor: pointer;
+        position: relative;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5rem;
+        color: var(--color-primary-light);
+        user-select: none;
+        perspective: 600px;
+        transition: transform var(--transition-speed) ease,
+          box-shadow var(--transition-speed) ease;
+      }
+      .card-game:focus {
+        outline: 3px solid var(--color-accent-light);
+        outline-offset: 2px;
+      }
+      .card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        border-radius: var(--border-radius);
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+      }
+      .card-game.flipped .card-inner {
+        transform: rotateY(180deg);
+      }
+      .card-front,
+      .card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: var(--border-radius);
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .card-front {
+        background: var(--color-primary-light);
+        color: white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        box-shadow: 0 6px 14px var(--shadow-light);
+      }
+      .card-back {
+        background: var(--color-card-bg-light);
+        color: var(--color-primary-light);
+        transform: rotateY(180deg);
+      }
+      .game-message {
+        text-align: center;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: var(--color-primary-light);
+        margin-top: 1rem;
+        min-height: 2.5rem;
+      }
+      button#reset-game {
+        display: block;
+        margin: 1.5rem auto 0;
+        background-color: var(--color-primary-light);
+        border: none;
+        color: white;
+        font-weight: 700;
+        font-size: 1.1rem;
+        padding: 0.7rem 2.5rem;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        box-shadow: 0 6px 14px var(--shadow-light);
+        transition: background-color var(--transition-speed) ease,
+          transform var(--transition-speed) ease;
+      }
+      button#reset-game:hover,
+      button#reset-game:focus {
+        background-color: var(--color-accent-light);
+        transform: scale(1.05);
+        outline-offset: 3px;
+      }
+      /* Responsive */
+      @media (max-width: 480px) {
+        .hero h1 {
+          font-size: 2.75rem;
+        }
+        #surprise-message {
+          font-size: 1.25rem;
+        }
+        button#reveal-btn {
+          font-size: 1.1rem;
+          padding: 0.75rem 2rem;
+        }
+        .card img {
+          height: 140px;
+        }
+        .game-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 0.75rem;
+        }
+        .card-game {
+          height: 80px;
+          font-size: 2rem;
+        }
+      }
+      /* Dark theme overrides */
+      body.dark {
+        background: var(--color-bg-dark);
+        color: var(--color-text-dark);
+      }
+      body.dark a {
+        color: var(--color-primary-dark);
+      }
+      body.dark a:hover,
+      body.dark a:focus {
+        color: var(--color-accent-dark);
+      }
+      body.dark header {
+        background: var(--color-bg-dark);
+        box-shadow: 0 2px 6px var(--shadow-dark);
+      }
+      body.dark header .logo {
+        color: var(--color-primary-dark);
+      }
+      body.dark header nav a {
+        color: var(--color-text-dark);
+      }
+      body.dark header nav a:hover,
+      body.dark header nav a:focus {
+        background-color: var(--color-card-bg-dark);
+        color: var(--color-accent-dark);
+      }
+      body.dark .theme-toggle .toggle-label {
+        color: var(--color-text-muted-dark);
+      }
+      body.dark .hero h1 {
+        color: var(--color-primary-dark);
+      }
+      body.dark .hero p.subtext {
+        color: var(--color-text-muted-dark);
+      }
+      body.dark button#reveal-btn {
+        background-color: var(--color-primary-dark);
+        box-shadow: 0 6px 14px var(--shadow-dark);
+      }
+      body.dark button#reveal-btn:hover,
+      body.dark button#reveal-btn:focus {
+        background-color: var(--color-accent-dark);
+      }
+      body.dark #surprise-message {
+        color: var(--color-primary-dark);
+      }
+      body.dark #countdown {
+        color: var(--color-text-muted-dark);
+      }
+      body.dark .carousel-message {
+        color: var(--color-primary-dark);
+      }
+      body.dark .carousel-controls button {
+        background: var(--color-card-bg-dark);
+        color: var(--color-primary-dark);
+      }
+      body.dark .carousel-controls button:hover,
+      body.dark .carousel-controls button:focus {
+        background-color: var(--color-primary-dark);
+        color: white;
+      }
+      body.dark section.moments h2 {
+        color: var(--color-primary-dark);
+      }
+      body.dark .moments-grid .card {
+        background: var(--color-card-bg-dark);
+        box-shadow: 0 8px 20px var(--shadow-dark);
+      }
+      body.dark .moments-grid .card:hover,
+      body.dark .moments-grid .card:focus-within {
+        box-shadow: 0 14px 28px var(--shadow-dark);
+      }
+      body.dark section.game h2 {
+        color: var(--color-primary-dark);
+      }
+      body.dark .game-info {
+        color: var(--color-text-muted-dark);
+      }
+      body.dark .card-game {
+        background: var(--color-card-bg-dark);
+        box-shadow: 0 6px 18px var(--shadow-dark);
+      }
+      body.dark .card-game.flipped .card-inner {
+        background: transparent;
+      }
+      body.dark .card-game:focus {
+        outline-color: var(--color-accent-dark);
+      }
+      body.dark .game-message {
+        color: var(--color-primary-dark);
+      }
+      body.dark button#reset-game {
+        background-color: var(--color-primary-dark);
+        box-shadow: 0 6px 14px var(--shadow-dark);
+      }
+      body.dark button#reset-game:hover,
+      body.dark button#reset-game:focus {
+        background-color: var(--color-accent-dark);
+      }
+
+      /* Password modal styles */
+      #password-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: var(--color-bg-light);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 99999;
+        padding: 2rem;
+        transition: opacity 0.4s ease;
+      }
+      #password-overlay.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #password-modal {
+        background: var(--color-card-bg-light);
+        border-radius: var(--border-radius);
+        box-shadow: 0 10px 30px var(--shadow-subtle-light);
+        padding: 2rem 3rem;
+        max-width: 400px;
+        width: 100%;
+        text-align: center;
+      }
+      #password-modal h2 {
+        margin-top: 0;
+        font-weight: 700;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: var(--color-primary-light);
+      }
+      #password-input {
+        font-family: inherit;
+        font-size: 1.1rem;
+        padding: 0.8rem 0.95rem;
+        width: 100%;
+        border: 2px solid var(--color-primary-light);
+        border-radius: var(--border-radius);
+        margin-bottom: 1.25rem;
+        transition: border-color 0.3s ease;
+      }
+      #password-input:focus {
+        border-color: var(--color-accent-light);
+        outline: none;
+      }
+      #password-submit {
+        cursor: pointer;
+        background-color: var(--color-primary-light);
+        border: none;
+        color: white;
+        font-weight: 700;
+        font-size: 1.15rem;
+        padding: 0.85rem 1.8rem;
+        border-radius: var(--border-radius);
+        box-shadow: 0 6px 14px var(--shadow-light);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        width: 100%;
+      }
+      #password-submit:hover,
+      #password-submit:focus {
+        background-color: var(--color-accent-light);
+        transform: scale(1.05);
+        outline-offset: 3px;
+      }
+      #password-error {
+        color: #d74949;
+        font-weight: 600;
+        margin-top: 0.5rem;
+        min-height: 1.25rem;
+        user-select: none;
+      }
+
+      /* Dark theme password modal adjustments */
+      body.dark #password-overlay {
+        background: var(--color-bg-dark);
+      }
+      body.dark #password-modal {
+        background: var(--color-card-bg-dark);
+        box-shadow: 0 10px 30px var(--shadow-dark);
+      }
+      body.dark #password-modal h2 {
+        color: var(--color-primary-dark);
+      }
+      body.dark #password-input {
+        border-color: var(--color-primary-dark);
+        background: transparent;
+        color: var(--color-text-dark);
+      }
+      body.dark #password-input:focus {
+        border-color: var(--color-accent-dark);
+      }
+      body.dark #password-submit {
+        background-color: var(--color-primary-dark);
+        box-shadow: 0 6px 14px var(--shadow-dark);
+      }
+      body.dark #password-submit:hover,
+      body.dark #password-submit:focus {
+        background-color: var(--color-accent-dark);
+      }
+      body.dark #password-error {
+        color: #e57575;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="password-overlay"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="password-title"
+      aria-describedby="password-desc"
+    >
+      <div id="password-modal">
+        <h2 id="password-title">Enter Password</h2>
+        <p id="password-desc">
+          Please enter the secret password to view your birthday surprise 🎂❤️
+        </p>
+        <form id="password-form">
+          <input
+            type="password"
+            id="password-input"
+            name="password"
+            aria-describedby="password-error"
+            aria-invalid="false"
+            placeholder="Type password here"
+            autocomplete="off"
+            required
+            minlength="4"
+            autofocus
+          />
+          <button type="submit" id="password-submit">Unlock</button>
+        </form>
+        <div id="password-error" role="alert" aria-live="assertive"></div>
+      </div>
+    </div>
+    <header role="banner">
+      <div class="logo" tabindex="0">CORRY AFLAH SHINTA🎀</div>
+      <nav role="navigation" aria-label="Primary">
+        <a href="#hero" tabindex="0">Home</a>
+        <a href="#moments" tabindex="0">Moments</a>
+        <a href="#game" tabindex="0">Fun &amp; Games</a>
+        <div class="theme-toggle" title="Toggle light/dark theme">
+          <label class="toggle-switch" for="theme-checkbox">
+            <input
+              type="checkbox"
+              id="theme-checkbox"
+              aria-label="Toggle dark mode"
+            />
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label" id="toggle-label">Light</span>
+        </div>
+      </nav>
+    </header>
+    <main aria-hidden="true" id="main-content" tabindex="-1">
+      <section class="hero" id="hero" aria-label="Birthday Greeting Section">
+        <h1 tabindex="0">Happy Birthday, Corry Cantik ❤️</h1>
+        <p class="subtext" tabindex="0">
+          Every moment with you is a treasure. Here's to more memories together
+          💕
+        </p>
+        <button
+          id="reveal-btn"
+          aria-describedby="surprise-message"
+          aria-expanded="false"
+        >
+          Pencet seng
+        </button>
+        <div id="surprise-message" role="region" aria-live="polite"></div>
+        <div
+          id="countdown"
+          aria-live="polite"
+          aria-atomic="true"
+          tabindex="0"
+        ></div>
+        <div class="carousel" aria-label="Surprise messages carousel">
+          <div
+            id="carousel-message-0"
+            class="carousel-message active"
+            tabindex="0"
+          >
+            You light up my life like no one else. ✨
+          </div>
+          <div id="carousel-message-1" class="carousel-message" tabindex="0">
+            Together, we've created a beautiful story. 📖
+          </div>
+          <div id="carousel-message-2" class="carousel-message" tabindex="0">
+            May your birthday be filled with all your favorite things. 🎁
+          </div>
+          <div
+            id="carousel-controls"
+            class="carousel-controls"
+            role="group"
+            aria-label="Surprise message navigation"
+          >
+            <button
+              type="button"
+              id="prev-btn"
+              aria-label="Previous message"
+              tabindex="0"
+              aria-controls="carousel-message-0 carousel-message-1 carousel-message-2"
+            >
+              ‹
+            </button>
+            <button
+              type="button"
+              id="next-btn"
+              aria-label="Next message"
+              tabindex="0"
+              aria-controls="carousel-message-0 carousel-message-1 carousel-message-2"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="moments" id="moments" aria-label="Photo Moments Section">
+        <h2 tabindex="0">Our Beautiful Moments</h2>
+        <div class="moments-grid">
+          <article class="card" tabindex="0" aria-label="Moment: Beach Sunset">
+            <img
+              src="firstdate.jpg"
+              alt="Sunset at the beach with us"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <h3>Fotbar pertama kita</h3>
+              <p>fotbar tapi belum jadian xixixi.</p>
+            </div>
+          </article>
+          <article class="card" tabindex="0" aria-label="Moment: Cozy Winter">
+            <img
+              src="malu malu.jpg"
+              alt="Cozy winter moments cuddling by the fireplace"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <h3>selfie pertama seng wkwkw</h3>
+              <p>disini juga belum jadian wkwkw.</p>
+            </div>
+          </article>
+          <article class="card" tabindex="0" aria-label="Moment: City Lights">
+            <img
+              src="anak math.jpg"
+              alt="City skyline lit up at night"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <h3>anaknya mtk banget der</h3>
+              <p>momen kamu jadi panitia emc meskipun kita kalah ehehe.</p>
+            </div>
+          </article>
+          <article class="card" tabindex="0" aria-label="Moment: Road Trip">
+            <img
+              src="ngelayat.jpg"
+              alt="Road trip driving through mountains"
+              loading="lazy"
+            />
+            <div class="card-content">
+              <h3>menjenguk orang yang kita sayang</h3>
+              <p>kenalan sama abang kamu dan abangku.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="game" id="game" aria-label="Fun and Games Section">
+        <h2 tabindex="0">Game havefun semoga kamu suka yak ❤️</h2>
+        <p class="game-info" id="game-info" tabindex="0">
+          Click cards to find matching pairs of romantic icons. Try to find all
+          pairs with as few moves as possible!
+        </p>
+        <div
+          class="game-grid"
+          role="grid"
+          aria-describedby="game-info"
+          aria-live="polite"
+        ></div>
+        <div
+          class="game-message"
+          id="game-message"
+          aria-live="polite"
+          tabindex="0"
+        ></div>
+        <button id="reset-game">Restart Game</button>
+      </section>
+    </main>
+    <script>
+      // Password gate logic
+      (function () {
+        const overlay = document.getElementById("password-overlay");
+        const form = document.getElementById("password-form");
+        const input = document.getElementById("password-input");
+        const errorDiv = document.getElementById("password-error");
+        const mainContent = document.getElementById("main-content");
+        const correctPassword = "240624"; // Set your password here
+
+        function unlockSite() {
+          overlay.classList.add("hidden");
+          overlay.setAttribute("aria-hidden", "true");
+          mainContent.removeAttribute("aria-hidden");
+          mainContent.focus();
+        }
+
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          errorDiv.textContent = "";
+          input.setAttribute("aria-invalid", "false");
+          const val = input.value.trim();
+          if (val === correctPassword) {
+            unlockSite();
+          } else {
+            errorDiv.textContent = "Incorrect password. Please try again.";
+            input.setAttribute("aria-invalid", "true");
+            input.focus();
+            input.select();
+          }
+        });
+      })();
+
+      // Dark mode toggle
+      const themeCheckbox = document.getElementById("theme-checkbox");
+      const toggleLabel = document.getElementById("toggle-label");
+      function applyTheme(dark) {
+        if (dark) {
+          document.body.classList.add("dark");
+          toggleLabel.textContent = "Dark";
+          localStorage.setItem("theme", "dark");
+        } else {
+          document.body.classList.remove("dark");
+          toggleLabel.textContent = "Light";
+          localStorage.setItem("theme", "light");
+        }
+      }
+      themeCheckbox.addEventListener("change", () => {
+        applyTheme(themeCheckbox.checked);
+      });
+      // Load stored theme or system preference
+      const storedTheme = localStorage.getItem("theme");
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      if (storedTheme === "dark" || (!storedTheme && prefersDark)) {
+        themeCheckbox.checked = true;
+        applyTheme(true);
+      }
+
+      // Surprise reveal button + confetti
+      const revealBtn = document.getElementById("reveal-btn");
+      const surpriseMessage = document.getElementById("surprise-message");
+      let surpriseShown = false;
+      function createConfettiPiece() {
+        const confetti = document.createElement("div");
+        confetti.style.position = "fixed";
+        confetti.style.width = "8px";
+        confetti.style.height = "14px";
+        confetti.style.backgroundColor = `hsl(${
+          320 + Math.random() * 40
+        }, 70%, 75%)`;
+        confetti.style.left = `${Math.random() * 100}vw`;
+        confetti.style.top = `-20px`;
+        confetti.style.opacity = "0.9";
+        confetti.style.borderRadius = "2px";
+        confetti.style.zIndex = "9999";
+        confetti.style.pointerEvents = "none";
+        confetti.style.transform = "rotate(0deg)";
+        confetti.style.transition = "transform 3.5s ease, opacity 3.5s ease";
+        document.body.appendChild(confetti);
+        setTimeout(() => {
+          confetti.style.transform = `translateY(${
+            window.innerHeight + 30
+          }px) rotate(${Math.random() * 360}deg)`;
+          confetti.style.opacity = "0";
+        }, 10);
+        setTimeout(() => {
+          confetti.remove();
+        }, 3600);
+      }
+      function startConfetti() {
+        let confettiTimer = setInterval(createConfettiPiece, 150);
+        setTimeout(() => clearInterval(confettiTimer), 6000);
+      }
+      revealBtn.addEventListener("click", () => {
+        if (surpriseShown) return;
+        surpriseShown = true;
+        revealBtn.setAttribute("aria-expanded", "true");
+        surpriseMessage.textContent =
+          "🎉 Surprise, my love! I treasure every moment with you and look forward to all the birthdays to come. You're my everything. ❤️";
+        surpriseMessage.classList.add("show");
+        startConfetti();
+        revealBtn.blur();
+      });
+
+      // Surprise messages carousel
+      const messages = document.querySelectorAll(".carousel-message");
+      const prevBtn = document.getElementById("prev-btn");
+      const nextBtn = document.getElementById("next-btn");
+      let currentMessage = 0;
+      function showMessage(index) {
+        messages.forEach((msg, i) => {
+          msg.classList.toggle("active", i === index);
+        });
+      }
+      prevBtn.addEventListener("click", () => {
+        currentMessage =
+          (currentMessage - 1 + messages.length) % messages.length;
+        showMessage(currentMessage);
+      });
+      nextBtn.addEventListener("click", () => {
+        currentMessage = (currentMessage + 1) % messages.length;
+        showMessage(currentMessage);
+      });
+
+      // Scroll animation for moment cards
+      const cards = document.querySelectorAll(".moments-grid .card");
+      const observerOptions = {
+        threshold: 0.15,
+      };
+      function onIntersection(entries, observer) {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }
+      const observer = new IntersectionObserver(
+        onIntersection,
+        observerOptions
+      );
+      cards.forEach((card) => observer.observe(card));
+
+      // Memory match game
+      const gameGrid = document.querySelector(".game-grid");
+      const gameInfo = document.getElementById("game-info");
+      const gameMessage = document.getElementById("game-message");
+      const resetBtn = document.getElementById("reset-game");
+
+      const symbols = ["❤️", "🌹", "💍", "🥂", "🎁", "🌟"];
+      let deck = [];
+      let flipped = [];
+      let matches = 0;
+      let moves = 0;
+      let lockBoard = false;
+
+      function shuffle(array) {
+        return array.sort(() => Math.random() - 0.5);
+      }
+
+      function createCard(symbol, index) {
+        const card = document.createElement("div");
+        card.classList.add("card-game");
+        card.setAttribute("role", "button");
+        card.setAttribute("tabindex", "0");
+        card.setAttribute("aria-label", "Hidden romantic card");
+        card.dataset.symbol = symbol;
+        card.dataset.index = index;
+        card.innerHTML = `
+      <div class="card-inner">
+        <div class="card-front" aria-hidden="true">?</div>
+        <div class="card-back" aria-hidden="true">${symbol}</div>
+      </div>
+    `;
+        card.addEventListener("click", () => flipCard(card));
+        card.addEventListener("keyup", (e) => {
+          if (e.key === "Enter" || e.key === " ") {
+            e.preventDefault();
+            flipCard(card);
+          }
+        });
+        return card;
+      }
+
+      function initGame() {
+        deck = shuffle([...symbols, ...symbols]);
+        flipped = [];
+        matches = 0;
+        moves = 0;
+        lockBoard = false;
+        gameGrid.innerHTML = "";
+        gameMessage.textContent = "";
+        gameInfo.textContent =
+          "Click cards to find matching pairs of romantic icons. Try to find all pairs with as few moves as possible!";
+        deck.forEach((sym, i) => {
+          const card = createCard(sym, i);
+          gameGrid.appendChild(card);
+        });
+      }
+
+      function flipCard(card) {
+        if (lockBoard) return;
+        if (flipped.includes(card)) return;
+        card.classList.add("flipped");
+        flipped.push(card);
+        if (flipped.length === 2) {
+          moves++;
+          const [first, second] = flipped;
+          if (first.dataset.symbol === second.dataset.symbol) {
+            first.setAttribute(
+              "aria-label",
+              `Matched card with symbol ${first.dataset.symbol}`
+            );
+            second.setAttribute(
+              "aria-label",
+              `Matched card with symbol ${second.dataset.symbol}`
+            );
+            matches++;
+            flipped = [];
+            if (matches === symbols.length) {
+              gameMessage.textContent = `🎉 You matched all pairs in ${moves} moves! Happy birthday, my love! ❤️`;
+            }
+          } else {
+            lockBoard = true;
+            setTimeout(() => {
+              flipped.forEach((c) => c.classList.remove("flipped"));
+              flipped = [];
+              lockBoard = false;
+            }, 1000);
+          }
+        }
+      }
+
+      resetBtn.addEventListener("click", () => {
+        initGame();
+        resetBtn.focus();
+      });
+
+      initGame();
+    </script>
+  </body>
+</html>
